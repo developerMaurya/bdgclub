@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html translate="no" data-dpr="1" style="font-size: 48.16px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="noindex,nofollow">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <title>BDG Club</title>
+    <link href="/css/wallet/main.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-1.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-2.css" rel="stylesheet" />
+    <link href="/css/wallet/chunk_2-3.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/images/bitbug_favicon.ico" type="image/x-icon">
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #9195a3;
+            padding: 0;
+            margin: 0;
+        }
+        .customer {
+      position: fixed;
+      bottom: 2.4rem;
+      right: .4rem;
+      width: 1.49333rem;
+      height: 1.49333rem;
+      border-radius: 50%;
+      z-index: 100
+    }
+
+    .customer img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%
+    }
+
+        .block-click {
+            pointer-events: none;
+        }
+
+        .mian[data-v-67caa467] {
+            padding-bottom: 1.6rem;
+            background-color: #fbfcfd
+        }
+
+        .mian[data-v-67caa467] .van-popup__close-icon--top-right {
+            top: .26667rem;
+            right: .26667rem
+        }
+
+        .mian .selectBox[data-v-67caa467] {
+            width: 100%
+        }
+
+        .mian .selectBox .colorBox[data-v-67caa467] {
+            height: 1.06667rem;
+            width: 100%;
+            background-image: linear-gradient(90deg, #cd0103, #f64841)
+        }
+
+        .mian .selectBox .txtBox[data-v-67caa467] {
+            background-color: #fff;
+            z-index: 99;
+            margin-top: -.8rem;
+            border-radius: .26667rem .26667rem 0 0;
+            padding: .26667rem .53333rem;
+            position: relative
+        }
+
+        .mian .selectBox .txtBox .txt[data-v-67caa467] {
+            color: #333;
+            font-size: .42667rem
+        }
+
+        .mian .selectBox .txtBox .money[data-v-67caa467] {
+            color: #090909;
+            font-weight: 600;
+            font-size: .58667rem
+        }
+
+        .mian .selectBox .txtBox .img.action[data-v-67caa467] {
+            -webkit-animation: rotation-data-v-67caa467 .5s linear
+        }
+
+        @-webkit-keyframes rotation-data-v-67caa467 {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+
+            to {
+                -webkit-transform: rotate(180deg)
+            }
+        }
+
+        .mian .selectBox .txtBox .icon[data-v-67caa467] {
+            position: absolute;
+            right: .53333rem;
+            top: 0;
+            height: 1.46667rem;
+            width: .88rem;
+            background: url(data:image/png;base64,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) no-repeat 50%;
+            background-size: 100% 100%
+        }
+
+        .mian .selectBox .recharge .title[data-v-67caa467] {
+            font-weight: 600
+        }
+
+        .mian .selectBox .recharge .rechargeType[data-v-67caa467] {
+            padding: .26667rem .4rem .13333rem;
+            height: 2rem;
+            background-color: #fff
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox[data-v-67caa467] {
+            width: 100%;
+            overflow-y: auto;
+            height: 1.81333rem
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox .item[data-v-67caa467] {
+            position: relative;
+            padding: .26667rem;
+            white-space: nowrap;
+            background-image: linear-gradient(40deg, #e5e7f6 35%, #f5f3fb);
+            margin-right: .4rem
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox .item .name[data-v-67caa467] {
+            color: #414141;
+            font-size: .34667rem
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox .item .txt[data-v-67caa467] {
+            font-size: .32rem
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox .item.action[data-v-67caa467] {
+            background-image: linear-gradient(90deg, #d71212, #ff5851);
+            position: relative
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox .item.action .icon[data-v-67caa467] {
+            text-align: right;
+            width: .53333rem;
+            line-height: .8rem;
+            height: .53333rem;
+            
+            background-size: 100% 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0
+        }
+
+        .mian .selectBox .recharge .rechargeType .customerBox .item.action .name[data-v-67caa467],
+        .mian .selectBox .recharge .rechargeType .customerBox .item.action .txt[data-v-67caa467] {
+            color: #fff
+        }
+
+        .mian .selectBox .recharge .conTxt[data-v-67caa467] {
+            padding: .4rem
+        }
+
+        .mian .selectBox .recharge .conTxt .li[data-v-67caa467] {
+            line-height: .53333rem;
+            color: #ed3935
+        }
+
+        .mian .selectBox .recharge .box[data-v-67caa467] {
+            padding: .13333rem .4rem .26667rem;
+            background: #fff;
+            box-shadow: 0 .08rem .69333rem .10667rem #f1f2f5
+        }
+
+        .mian .selectBox .recharge .box .list.rechargeList .item[data-v-67caa467] {
+            border: .05333rem solid #fff;
+            margin-bottom: .26667rem;
+            padding: .26667rem .4rem;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 .24rem .4rem 0 rgba(240, 74, 80, .05);
+            border-radius: .4rem
+        }
+
+        .mian .selectBox .recharge .box .list.rechargeList .item .txt[data-v-67caa467] {
+            color: #a2a2a2;
+            font-size: .34667rem;
+            margin-top: .26667rem
+        }
+
+        .mian .selectBox .recharge .box .list.rechargeList .item .icon[data-v-67caa467] {
+            height: .66667rem;
+            width: .66667rem;
+            border-radius: .66667rem;
+            background-color: #fdd0cf
+        }
+
+        .mian .selectBox .recharge .box .list.rechargeList .item.action[data-v-67caa467] {
+            border-color: #fb4e4e
+        }
+
+        .mian .selectBox .recharge .box .list .item[data-v-67caa467] {
+            border: .05333rem solid #fff;
+            margin-bottom: .26667rem;
+            padding: .26667rem;
+            text-align: center;
+            width: 30%;
+            background: #fff;
+            box-shadow: 0 .18667rem .50667rem 0 rgba(143, 139, 139, .11);
+            border-radius: .4rem;
+            margin-right: .26667rem
+        }
+
+        .mian .selectBox .recharge .box .list .item .icon[data-v-67caa467] {
+            margin: 0 auto
+        }
+
+        .mian .selectBox .recharge .box .list .item.action[data-v-67caa467] {
+            border-color: #fb4e4e;
+            color: #fb4e4e
+        }
+
+        .mian .selectBox .recharge .box.numberBox .number-box .fuhao[data-v-67caa467] {
+            font-size: .53333rem
+        }
+
+        .mian .selectBox .recharge .box.numberBox .number-box .input[data-v-67caa467] {
+            font-size: .42667rem
+        }
+
+        .mian .selectBox .recharge .box.numberBox .item[data-v-67caa467] {
+            padding: .26667rem;
+            height: 1.06667rem;
+            line-height: .53333rem;
+            border-radius: .13333rem;
+            font-size: .4rem
+        }
+
+        .mian .selectBox .recharge-btn[data-v-67caa467] {
+            width: 70%;
+            height: 1.06667rem;
+            font-size: .4rem;
+            margin: 0 auto;
+            box-shadow: 0 0 .21333rem .02667rem rgba(92, 186, 71, .72)
+        }
+
+        .mian .selectBox .pay-box[data-v-67caa467] {
+            padding: 0 .53333rem
+        }
+
+        .mian .selectBox .pay-box .title[data-v-67caa467] {
+            font-size: .4rem;
+            font-weight: 600
+        }
+
+        .mian .selectBox .pay-box .title .time[data-v-67caa467] {
+            background-image: linear-gradient(90deg, #d71212, #ff5851);
+            padding: .13333rem .26667rem;
+            color: #fff;
+            border-radius: .05333rem
+        }
+
+        .mian .selectBox .pay-box .numberSize .fuhao[data-v-67caa467] {
+            font-size: .53333rem
+        }
+
+        .mian .selectBox .pay-box .numberSize .input[data-v-67caa467] {
+            font-size: .42667rem
+        }
+
+        .mian .selectBox .pay-box .bank-list[data-v-67caa467] {
+            margin-top: .26667rem
+        }
+
+        .mian .selectBox .pay-box .bank-list .item[data-v-67caa467] {
+            border: .05333rem solid #eee;
+            margin-bottom: .26667rem;
+            padding: .26667rem;
+            width: 100%;
+            background: #fff;
+            box-shadow: 0 .24rem .4rem 0 rgba(240, 74, 80, .05);
+            border-radius: .26667rem
+        }
+
+        .mian .selectBox .pay-box .bank-list .item .txt[data-v-67caa467] {
+            color: #a2a2a2;
+            font-size: .34667rem;
+            margin-top: .26667rem
+        }
+
+        .mian .selectBox .pay-box .bank-list .item .icon[data-v-67caa467] {
+            height: .66667rem;
+            width: .66667rem;
+            border-radius: .66667rem;
+            border: .05333rem solid #eee
+        }
+
+        .mian .selectBox .pay-box .bank-list .item .icon.action[data-v-67caa467] {
+            border-color: #fdd0cf;
+            background-color: #fdd0cf
+        }
+
+        .mian .selectBox .pay-box .bank-list .item.action[data-v-67caa467] {
+            border-color: #fb4e4e
+        }
+
+        .mian .selectBox .pay-box .bank-list .next-btn[data-v-67caa467] {
+            width: 70%;
+            height: 1.06667rem;
+            font-size: .4rem;
+            margin: 0 auto;
+            box-shadow: 0 0 .21333rem .02667rem rgba(92, 186, 71, .72)
+        }
+
+        .mian .selectBox .pay-box .bank-list .next-btn.action[data-v-67caa467] {
+            box-shadow: 0 0 .21333rem .02667rem #b5b5b5
+        }
+
+        .mian .selectBox .pay-box .list .item[data-v-67caa467] {
+            text-align: center;
+            padding: .26667rem 0;
+            margin-bottom: .26667rem;
+            width: 31%;
+            margin-left: 3%;
+            background-image: linear-gradient(40deg, #f6f7ff 35%, #e6e6e6);
+            box-shadow: 0 .05333rem .21333rem #d0d0ed5c;
+            border-radius: .13333rem;
+            border-radius: .26667rem;
+            overflow: hidden;
+        }
+
+        .mian .selectBox .pay-box .list .item .img[data-v-67caa467] {
+            margin: 0 auto .13333rem;
+            width: .53333rem;
+            height: .53333rem
+        }
+
+        .mian .selectBox .pay-box .list .item .txt[data-v-67caa467] {
+            position: relative;
+            font-size: .34667rem;
+            color: #333
+        }
+
+        .mian .selectBox .pay-box .list .item .name[data-v-67caa467] {
+            color: #414141;
+            font-size: .37333rem
+        }
+
+        .mian .selectBox .pay-box .list .item[data-v-67caa467]:nth-child(3n+1) {
+            margin-left: 0
+        }
+
+        .mian .selectBox .pay-box .list .item.action[data-v-67caa467] {
+            position: relative;
+    background: linear-gradient(180deg, #e97e0f 0%, #fcbc42 100%);
+    box-shadow: 0 .08rem .16rem #d0d0ed99, inset 0 -.05333rem .13333rem #fff0ed;
+    color: #fff;
+        }
+
+        .mian .selectBox .pay-box .list .item.action .icon[data-v-67caa467] {
+            padding-right: .10667rem;
+            text-align: right;
+            width: .8rem;
+            line-height: 1.06667rem;
+            height: .8rem;
+            
+            background-size: 100% 100%;
+            position: absolute;
+            right: 0;
+            bottom: 0
+        }
+
+        .mian .selectBox .pay-box .list .item.action .name[data-v-67caa467],
+        .mian .selectBox .pay-box .list .item.action .txt[data-v-67caa467] {
+            color: #fff
+        }
+
+        .mian .selectBox .pay-box .list .li[data-v-67caa467] {
+
+            padding: 0.26667rem;
+
+            width: 30%;
+            margin-bottom: .26667rem;
+            margin-right: .4rem;
+            /* width: calc((100% - .8rem) / 3); */
+            border: .01333rem solid #dfdede;
+            /* padding: .16rem 0; */
+            border-radius: .13333rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .mian .selectBox .pay-box .list .li[data-v-67caa467]:nth-child(3n) {
+            margin-right: 0
+        }
+
+        .mian .selectBox .pay-box .list .li.action[data-v-67caa467] {
+            BORDER: NONE;
+            color: #ffffff;
+            border-radius: .13333rem;
+            background: linear-gradient(180deg, #e97e0f 0%, #fcbc42 100%);
+    box-shadow: inset 0 -.05333rem .13333rem #fff0ed;
+}
+
+
+        .mian .selectBox .pay-box .info .tit[data-v-67caa467] {
+            width: 35%;
+            line-height: .4rem
+        }
+
+        .mian .selectBox .pay-box .info .con[data-v-67caa467] {
+            width: 65%
+        }
+
+        .mian .selectBox .pay-box .info .con .text[data-v-67caa467] {
+            width: 85%;
+            font-size: .4rem;
+            font-weight: 600;
+            word-break: break-all;
+            word-wrap: break-word
+        }
+
+        .mian .selectBox .pay-box .info .con .wenhao[data-v-67caa467] {
+            font-weight: 600;
+            font-size: .42667rem;
+            height: .61333rem;
+            width: .66667rem;
+            background-color: rgba(29, 58, 89, .4);
+            border-radius: .66667rem;
+            color: #fff
+        }
+
+        .mian .selectBox .pay-box .info .con .iptbox[data-v-67caa467] {
+            width: 100%
+        }
+
+        .mian .selectBox .pay-box .info .con .iptbox .ipt[data-v-67caa467] {
+            border: none;
+            width: 100%;
+            height: 1.04rem;
+            padding: 0 .13333rem
+        }
+
+        .mian .selectBox .pay-box .box[data-v-67caa467] {
+            height: 1.06667rem;
+            border-bottom: .02667rem solid #eee;
+            overflow: hidden
+        }
+
+        .mian .selectBox .pay-box .up-img[data-v-67caa467] {
+            background-color: #f7f8fa
+        }
+
+        .mian .selectBox .pay-box .up-img .up-imgCon[data-v-67caa467] {
+            padding-top: .13333rem
+        }
+
+        .mian .selectBox .pay-box .up-img .up-imgCon .txt[data-v-67caa467] {
+            padding-bottom: .13333rem;
+            font-size: .32rem;
+            line-height: .48rem
+        }
+
+        .mian .selectBox .pay-box .up-img .up-imgCon .btn[data-v-67caa467] {
+            height: .93333rem;
+            border-radius: .13333rem
+        }
+
+        .mian .selectBox .pay-box .des[data-v-67caa467] {
+            margin-bottom: .26667rem;
+            font-size: .34667rem;
+            color: #ed3935;
+            line-height: .4rem
+        }
+
+        .mian .selectBox .pay-box .tranrefidBox[data-v-67caa467] {
+            width: 100%;
+            height: .93333rem
+        }
+
+        .mian .selectBox .pay-box .tranrefidBox .inp[data-v-67caa467] {
+            height: .93333rem;
+            width: 100%;
+            padding: 0 .26667rem
+        }
+
+        .mian .selectBox .pay-box .btn-list .item[data-v-67caa467] {
+            padding: 0 .53333rem
+        }
+
+        .mian .selectBox .pay-box .btn-list .item .next-btn[data-v-67caa467] {
+            height: 1.06667rem
+        }
+
+        .mian .selectBox .pay-box .btn-list .item .btn[data-v-67caa467] {
+            width: 100%;
+            height: 1.06667rem;
+            line-height: 1.06667rem;
+            color: #fff;
+            text-align: center;
+            background: #d8d8d8;
+            box-shadow: 0 .16rem .34667rem .10667rem hsla(0, 0%, 71.4%, .27);
+            border-radius: 1.06667rem;
+            font-size: .48rem
+        }
+
+        .mian .selectBox .pay-box .btn-list .item .btn.confirm[data-v-67caa467] {
+            background: #6abe57;
+            box-shadow: 0 .05333rem .26667rem .02667rem rgba(92, 186, 71, .72)
+        }
+
+        .mian .selectBox .pay-box .cancel[data-v-67caa467] {
+            width: 80%;
+            height: 1.06667rem;
+            line-height: 1.06667rem;
+            color: #fff;
+            text-align: center;
+            background: #d8d8d8;
+            box-shadow: 0 .16rem .34667rem .10667rem hsla(0, 0%, 71.4%, .27);
+            border-radius: 1.06667rem;
+            font-size: .48rem
+        }
+
+        .mian .selectBox .pay-box .cancel .time[data-v-67caa467] {
+            background: #8a8a8a
+        }
+
+        .mian .popup-box .title[data-v-67caa467] {
+            height: 1.6rem;
+            width: 100%;
+            background: url(../img/myProfilebg.298e3612.png) no-repeat 0 0;
+            background-size: 100% 100%
+        }
+
+        .mian .popup-box .con[data-v-67caa467] {
+            padding: .26667rem 0;
+            border-bottom: .02667rem solid #dadada;
+            font-size: .4rem
+        }
+
+        .mian .popup-box .con .lab[data-v-67caa467] {
+            padding: 0 .26667rem;
+            margin-bottom: .26667rem
+        }
+
+        .mian .popup-box .con .input[data-v-67caa467] {
+            height: .8rem;
+            width: 100%;
+            padding: 0 .26667rem;
+            border: none
+        }
+
+        .mian .popup-box .food[data-v-67caa467] {
+            height: 1.33333rem;
+            line-height: 1.33333rem
+        }
+
+        .mian .popup-box .food .item[data-v-67caa467] {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: .45333rem
+        }
+
+        .mian .popup-box .food .item.sure[data-v-67caa467] {
+            color: #6abe57
+        }
+
+        .mian .con-boxx .tips[data-v-67caa467] {
+            font-size: .48rem;
+            font-weight: 600
+        }
+
+        .mian .con-boxx .step-2[data-v-67caa467] {
+            font-size: .32rem;
+            color: #999;
+            margin: .21333rem
+        }
+
+        .mian .con-boxx .step-2.red span[data-v-67caa467] {
+            padding: 0;
+            font-size: .32rem;
+            border-radius: 50%;
+            background: #ff4605;
+            color: #fff;
+            display: inline-block;
+            width: .37333rem;
+            height: .37333rem;
+            text-align: center;
+            line-height: .37333rem;
+            margin-right: .16rem;
+            font-style: unset
+        }
+
+        html {
+            -webkit-tap-highlight-color: transparent
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Segoe UI, Arial, Roboto, PingFang SC, Hiragino Sans GB, Microsoft Yahei, sans-serif
+        }
+
+        .Recharge__container[data-v-9171efc9] {
+            position: relative;
+            width: 100%;
+            padding: 15px .32rem .32rem;
+        }
+
+        .balanceAssets[data-v-d42c1f7a] {
+            width: 100%;
+            height: 3.46667rem;
+            background-image: url(/assets/png/TotalAssetsBg-81d648d4.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            border-radius: .26667rem;
+            color: #fff;
+            padding: .38667rem .33333rem 0;
+            position: relative;
+        }
+
+        .balanceAssets__header[data-v-d42c1f7a] {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+            height: .53333rem;
+        }
+
+        .balanceAssets__header__left[data-v-d42c1f7a] {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .balanceAssets__header__left[data-v-d42c1f7a] {
+            font-weight: 400;
+            font-size: .34667rem;
+        }
+
+        .balanceAssets__header__left img[data-v-d42c1f7a] {
+            width: .4rem;
+            height: .4rem;
+            margin-right: .21333rem;
+        }
+
+        .balanceAssets__header__left img[data-v-d42c1f7a] {
+            margin-right: .21333rem;
+        }
+
+        .balanceAssets__main[data-v-d42c1f7a] {
+            height: .73333rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            margin: .21333rem .37333rem .37333rem 0;
+            font-weight: 700;
+            font-size: .64rem;
+            text-shadow: 0 .01333rem 0 rgba(0, 0, 0, .12);
+        }
+
+        .balanceAssets__main p[data-v-d42c1f7a] {
+            margin-left: .26667rem;
+        }
+
+        .balanceAssets__main img[data-v-d42c1f7a] {
+            width: .58667rem;
+            height: .37333rem;
+            margin-left: .24rem;
+        }
+
+        .balanceAssets__tip img[data-v-d42c1f7a] {
+            width: .66667rem;
+            height: .42667rem;
+            position: absolute;
+            bottom: .34667rem;
+            left: .38667rem;
+        }
+
+        .Recharge__container-intro[data-v-c2e24b33] {
+            background: #ffffff;
+            border-radius: .26667rem;
+            padding: .33333rem .26667rem;
+        }
+
+        .Recharge__container-intro__title[data-v-c2e24b33] {
+            font-weight: 600;
+            font-size: .4rem;
+            margin-bottom: .33333rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex
+        }
+
+        .Recharge__container-intro__title img[data-v-c2e24b33] {
+            width: .64rem;
+            height: .64rem;
+            margin-right: .16rem
+        }
+
+        .Recharge__container-intro__lists[data-v-c2e24b33] {
+            border: .01333rem solid #d6d6d6;
+            border-radius: .26667rem;
+            padding: .18667rem .22667rem .48rem .4rem
+        }
+
+        .Recharge__container-intro__lists .item[data-v-c2e24b33] {
+            margin-top: .26667rem
+        }
+
+        .Recharge__container-intro__lists .item p[data-v-c2e24b33] {
+            text-align: left;
+            position: relative;
+            padding-left: .33333rem;
+            font-weight: 400;
+            font-size: .32rem;
+            color: #666;
+            line-height: .53333rem;
+            margin: .2rem 0
+        }
+
+        .Recharge__container-intro__lists .item p span.red[data-v-c2e24b33] {
+            color: #fa5a5a
+        }
+
+        .Recharge__container-intro__lists .item p[data-v-c2e24b33]:after {
+            position: absolute;
+            content: "";
+            width: .13333rem;
+            height: .13333rem;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background: #fa5a5a;
+            left: -.06667rem;
+            top: .18667rem
+        }
+
+        .boxStyle[data-v-87a372a3] {
+            background: #ffffff;
+            box-shadow: 0 .05333rem .21333rem #d0d0ed5c;
+            border-radius: .26667rem;
+            margin-top: .26667rem;
+            padding: .4rem .29333rem .42667rem .26667rem;
+            margin-bottom: .4rem;
+        }
+
+        .Recharge__content-paymoney__title[data-v-87a372a3] {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            font-weight: 600;
+            font-size: .48rem;
+            margin-bottom: .34667rem;
+        }
+
+        .Recharge__content-paymoney__title img[data-v-87a372a3] {
+            width: .64rem;
+            height: .64rem;
+            margin-right: .30667rem;
+        }
+
+        .Recharge__content-paymoney__money-list[data-v-87a372a3] {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-bottom: .26667rem;
+        }
+
+        .Recharge__content-paymoney__money-list__item[data-v-87a372a3] {
+            margin-bottom: .26667rem;
+            margin-right: .2rem;
+            width: calc((100% - .8rem) / 3);
+            border: .01333rem solid #dfdede;
+            padding: .16rem 0;
+            border-radius: .13333rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .Recharge__content-paymoney__money-list__item.active[data-v-87a372a3] {
+            background: -webkit-linear-gradient(left, #ff918c 0%, #ffbd9f 100%);
+            background: linear-gradient(90deg, #ff918c 0%, #ffbd9f 100%);
+            border-radius: .13333rem;
+            color: #fff;
+            border: none;
+        }
+
+        .Recharge__content-paymoney__money-list__item .amount[data-v-87a372a3] {
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            position: relative;
+            font-size: .42667rem;
+        }
+
+        .Recharge__content-paymoney__money-list__item.active span[data-v-87a372a3] {
+            color: #fff;
+        }
+
+        .Recharge__content-paymoney__money-list__item .amount span[data-v-87a372a3] {
+            position: absolute;
+            left: .21333rem;
+            color: #bababa;
+            font-size: .42667rem;
+        }
+
+        .Recharge__content-paymoney__money-input[data-v-87a372a3] {
+            position: relative;
+            height: 1.17333rem;
+            width: 100%;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            background: #f2f2f2;
+            border-radius: .58667rem;
+        }
+
+        .Recharge__content-paymoney__money-input .place-div[data-v-87a372a3] {
+            height: 1.17333rem;
+            width: 1.2rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .Recharge__content-paymoney__money-input .place-div[data-v-87a372a3] {
+            position: absolute;
+            height: 1.17333rem;
+            width: .8rem;
+            color: #ff9901;
+            font-weight: 900;
+            font-size: .56rem;
+            line-height: 1.17333rem;
+        }
+
+        .Recharge__content-paymoney__money-input .place-div[data-v-87a372a3]:before {
+            content: "";
+            height: .53333rem;
+            position: absolute;
+            border-left: .01333rem solid #bdbdbd;
+            right: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+
+        .Recharge__content-paymoney__money-input .place-div[data-v-87a372a3]:after {
+            position: absolute;
+            content: "";
+            height: .53333rem;
+            display: inline-block;
+            margin: 0 .13333rem .02667rem;
+            vertical-align: middle;
+            border-right: .02667rem solid #bdbdbd;
+            top: .34667rem;
+            right: -.13333rem;
+        }
+
+        .Recharge__content-paymoney__money-input .amount-input[data-v-87a372a3] {
+            background-color: transparent;
+            margin-left: 1.33333rem;
+        }
+
+        .van-field {
+            -webkit-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+        .van-cell {
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            box-sizing: border-box;
+            width: 100%;
+            padding: var(--van-cell-vertical-padding) var(--van-cell-horizontal-padding);
+            overflow: hidden;
+            color: var(--van-cell-text-color);
+            font-size: var(--van-cell-font-size);
+            line-height: var(--van-cell-line-height);
+            background: var(--van-cell-background);
+        }
+
+        .van-cell__value {
+            position: relative;
+            overflow: hidden;
+            color: var(--van-cell-value-color);
+            font-size: var(--van-cell-value-font-size);
+            text-align: right;
+            vertical-align: middle;
+            word-wrap: break-word;
+        }
+
+        .van-cell__title,
+        .van-cell__value {
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            flex: 1;
+        }
+
+        .van-field__body {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .Recharge__content-paymoney__money-input .amount-input[data-v-87a372a3] input {
+            color: #ff9901;
+            font-weight: 700;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        .van-field__control {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            min-width: 0;
+            margin: 0;
+            padding: 0;
+            color: var(--van-field-input-text-color);
+            line-height: inherit;
+            text-align: left;
+            background-color: transparent;
+            border: 0;
+            resize: none;
+            -webkit-user-select: auto;
+            user-select: auto;
+        }
+
+        .Recharge__content-paymoney__money-input .place-right[data-v-87a372a3] {
+            position: absolute;
+            right: .32rem;
+            top: .32rem;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-content: center;
+            align-content: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+        }
+
+        .Recharge__content-paymoney__money-input .place-right img[data-v-87a372a3] {
+            width: .53333rem;
+            height: .53333rem;
+        }
+
+        .rechage_active[data-v-87a372a3] {
+            background: #fa5a5a;
+        }
+
+        .Recharge__container-rechageBtn[data-v-87a372a3] {
+            margin-top: .66667rem;
+            font-size: .4rem;
+            z-index: 88;
+            background: #fa5a5a;
+            width: 100%;
+            max-width: 10rem;
+            height: .93333rem;
+            line-height: .93333rem;
+            color: #fff;
+            text-align: center;
+            border-radius: .66667rem;
+            margin-bottom: .4rem;
+        }
+    </style>
+</head>
+
+<body style="font-size: 12px;">
+    <div class="customer" id="customerId" draggable="true" onclick="location.href='/keFuMenu'" style="--76181987: 'Roboto', 'Inter', sans-serif; --17a7a9f6: bahnschrift;">
+        <img class="" data-origin="/assets/png/icon_sevice-9f0c8455.png" src="/assets/png/icon_sevice-9f0c8455.png">
+    </div>
+    <div id="app">
+        <div data-v-67caa467="" class="mian">
+            <div data-v-106b99c8="" data-v-67caa467="" class="navbar">
+                <div data-v-106b99c8="" class="navbar-left" onclick="location.href='/mian'">
+                    <div data-v-106b99c8="" class="bank c-row c-row-middle-center">
+                        <img data-v-106b99c8="" src="/images/back.c3244ab0.png" class="navbar-back">
+                    </div>
+                </div>
+                <div data-v-106b99c8="" class="navbar-title">  </div>
+                <div data-v-106b99c8="" class="navbar-right" onclick="location.href='/wallet/rechargerecord'">Deposit
+                    History
+                </div>
+            </div>
+
+            <div data-v-9171efc9="" class="Recharge__container">
+                <div data-v-d42c1f7a="" data-v-9171efc9="" class="balanceAssets">
+                    <div data-v-d42c1f7a="" class="balanceAssets__header">
+                        <div data-v-d42c1f7a="" class="balanceAssets__header__left"><img data-v-d42c1f7a=""
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAArlBMVEUAAAD/sjH/zRj/zR//1zbuR0f/zBb/zRf/zhr/zRn/+HfuSUn/zBn/+njvSUn/zCH/+Xf/+XX/+HT/+nj/zBn/zRr/pSL/20H/2T3/1Db/zBf/30j/1zn/7mP/8Gb/3UT/9nL/9W//8mn/82z/7GDuSEj/+Xf/0zP/5lX/5FL/4Uz/6Vv/6Fj/40//613/+HT/vTT/2033kj3/xzz+yzX/rSj/sSr/0kH/sSz/rym/OY7sAAAAFnRSTlMAIsBCE+/v3IFxkZGRgYEy7+/v7rBhR1ORgAAAAh9JREFUWMPtkuly2jAQgA3hyJ2e1BKyMYGC7dbYXEn6/i/W1QqNughsI03+dPIh7SXzDSMcfPD/czXsQfTmqcv5tb+md88lHV/PzYAjXd/L4ZorD02nyw1D98u55oQb98uhDHpOl9PlFvcOl/ONn+Lp4ssZWA6XV+D70DI0vwIPnxZOfL2lnttFA6VV6vqBiL6UNouyFZ+JKDlNWSY1HA6pyB0qmgIJbJOxSnAnZowBk4GK3KGimWI6lcEs7LDChP3hMQMVuUNFz4rZIet2Rqa6PJpSkROxLYrj5xi3A1Rk8BZFcSQXFpoYw+FAT2IcmIeIKHKHiubRfC43xkguDIAa6KkeSXSkIg+IaDVfwWi1khtrALKu1AEs1aisayq6gPV2PyJ0AsOv1qSVMfiI0rdRreh3W6pRa1Gqc0pHyHrUIErboS5om63ffEUv8L0K8vqcKCOk2Tn2UiSLelEz8hft8yzbnhMVRZHBByKEGvCO9ltI50R5cZLj+WvTv5YXuYE2lKpJ1JbxS71onI81WJGGVlW96AJeqz81Ig+Cf5l48D6iH8gEtiomWE90g6VusMOEWCJnbFGIERMl1DmUoVYUevBOIiFECAFPhGyELDDgR00EgqXujkTCAyJiMGAQIApmSgOjpQ7MEl2KMCUR7ZgzOyLasCVjyyUsCTMBUYeqx83wXLEhov5mt3Rit+kT0eNPZ+4Cwl3fTdN/DD5oy19QoJEcy1l/8AAAAABJRU5ErkJggg==">
+                            Balance</div>
+                    </div>
+                    <div data-v-d42c1f7a="" class="balanceAssets__main">
+                        <p data-v-d42c1f7a="" class="money">₹0.00</p>
+                        <img data-v-d42c1f7a="" id="reloadmoney" src="/assets/png/refresh.png" alt="">
+
+                    </div>
+                    <div data-v-d42c1f7a="" class="balanceAssets__tip"><img data-v-d42c1f7a=""
+                            src="/assets/png/cip-7ed1a634.png" alt=""></div>
+                </div>
+            </div>
+            <div data-v-67caa467="" class="selectBox">
+                <!-- <div data-v-67caa467="" class="colorBox"></div>
+                <div data-v-67caa467="" class="txtBox c-row c-row-middle">
+                    <div data-v-67caa467="" class="txt p-r-5"> Total Balance: </div>
+                    <div data-v-67caa467="" class="c-row c-row-middle">
+                        <div data-v-67caa467="" class="money">
+                           
+                            <div data-v-67caa467="">34871.40<span data-v-67caa467="" class="p-l-5"> ₹</span></div>
+                        </div>
+                        <div data-v-67caa467="" class="van-image img m-l-10" style="width: 18px; height: 18px;">
+                            <img src="/images/reload.png" class="van-image__img">
+                        </div>
+                    </div>
+                    <div data-v-67caa467="" class="icon"></div>
+                </div> -->
+                <div data-v-67caa467="" class="pay-box">
+                    <div data-v-67caa467="" class="title c-row c-row-middle">
+                        <div data-v-67caa467="" class="van-image" style="width: 20px; height: 20px;">
+                            <img src="/images/htmls2.png" class="van-image__img">
+                        </div>
+                        <span data-v-67caa467="" class="m-l-10"> Payment Method </span>
+                    </div>
+                    <div data-v-67caa467="" class="list c-row c-flex-warp m-t-10">
+                        <div data-v-67caa467="" class="item action" type="bank">
+                            <img data-v-67caa467="" width="20px" height="20px" src="/images/recharge_TRANSFER_red.webp"
+                                class="img">
+                            <div data-v-67caa467="" class="name">E-Pay(UPI)</div>
+                            <div data-v-67caa467="" class="icon">
+                                <i data-v-67caa467="" class="van-icon van-icon-success"
+                                    style="color: rgb(255, 255, 255); font-size: 14px;"> </i>
+                            </div>
+
+                        </div>
+                        <div data-v-67caa467="" class="item" type="MOMO">
+                            <img data-v-67caa467="" width="20px" height="20px" src="/images/recharge_TRANSFER_red.webp"
+                                class="img">
+                            <div data-v-67caa467="" class="name">T-Pay(UPI 2)</div>
+
+
+                        </div>
+
+                        <div data-v-67caa467="" class="item" type="usdt">
+                            <img data-v-67caa467="" width="20px" height="20px" src="/images/recharge_TRANSFER_red.webp"
+                                class="img">
+                            <div data-v-67caa467="" class="name">USDT</div>
+
+
+                        </div>
+                        <div data-v-67caa467="" class="item" type="trx">
+                            <img data-v-67caa467="" width="20px" height="20px" src="/images/recharge_TRANSFER_red.webp"
+                                class="img">
+                            <div data-v-67caa467="" class="name">TRX</div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div data-v-67caa467="" class="pay-box">
+
+
+
+                    <!-- <div data-v-67caa467="">
+                        <div data-v-67caa467="">
+
+
+
+                            
+                            <div data-v-67caa467="" class="box numberSize c-row c-row-between c-row-middle p-l-10">
+                                <div data-v-67caa467="" class="fuhao"> </div>
+                                <div data-v-67caa467="" class="c-row">
+                                    <div data-v-67caa467="" class="van-image" style="width: 20px; height: 20px;">
+                                        <img src="/images/htmls2.png" class="van-image__img">
+                                    </div>
+                                    <span data-v-67caa467="" class="m-l-10"> Amount ₹</span>
+                                </div>
+                                <div data-v-67caa467="" class="input van-cell van-field">
+                                    <div class="van-cell__value van-cell__value--alone van-field__value">
+                                        <div class="van-field__body">
+                                            <input type="tel" value="250" id="ramount" inputmode="numeric"
+                                                oninput="value=value.replace(/\D/g,'')"
+                                                placeholder="Please enter the amount" class="van-field__control ">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-v-67caa467="" class="btn-list c-row c-row-center m-t-30">
+                              
+                                <div data-v-67caa467="" class="item flex-cover" id="create-bank">
+                                    <button data-v-67caa467=""
+                                        class="next-btn van-button1 van-button1--default van-button1--normal van-button1--block van-button1--round">
+                                        <div data-v-67caa467="" class="van-button1__content">
+                                            <span data-v-67caa467="" class="van-button1__text"> Deposit Fund </span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div data-v-87a372a3="" class="Recharge__content-paymoney boxStyle">
+                        <div data-v-87a372a3="" class="Recharge__content-paymoney__title"><img data-v-87a372a3=""
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAMAAADVRocKAAAAS1BMVEUAAAD/cXL/cXL/cXL/cXP/cXL/cID/cHD/cnL/cHD/cHj/cnT/cXP/cXL/cXH/cnP/cHL/c3P/cHP/cHD/cnP/cHX/cXP/cnL/cXJIiAqNAAAAGHRSTlMA79+gv4AQEGAgIEDPcJCPYFBQMK8wkK/DVpbzAAAC9ElEQVRo3u2Z27ajIAyGk4goHmq17S7v/6SzXE0noxWQDdzM6n+5l5svJ2Ji4auvvoqXHu9KVTMUUq/sS9RBfvUT2r/CR/bQKLsRdnlDg3avCnLpVqM9ki4UmstyfQGXHKF57oxXfQMAlV3VQqJMvT+9Xk8XQO7Q9MASQGrJi9TMxucA6H1oiEOTBaBbR2gyAcZ9aFo2Pg9Ab61HDk02gCZvaNIBdzlejWx8TkAroTHAygogNp5DkxcgDtQABQDyXwTFAINddS0H4LdIacB6HfppQBspVNN8CiCtLl5Ud2HAjDZB1AYA6apLA2xVGmCn0gA7lwagdgOKJtqWdsHmU18a8FMaMJQGYBTgeHZpRh8hBjCCQ3UaILzHNMUBaTkI998xtqNah8ZDH7QnBWQKlSmSWsVllxuAdWgixLTLK2HxJA3VuJgGoLn14zMKSA2EZW7bp5bn+fgY+JVMFfOKeSiU4eWsFjoFWB3o0HHR/GouZ9uzCrWK6KYmUvsy92zJ1Tr34lC1WgjZAN2EVlR1pwnkCFGou0xa9gG/1gcNCfDQ/OHAMnaioTNlaioOAB6tSY/DM+jBX18CgPAXwo7Pd/mgQlkIELQzBqTZhYDIv0BN/NTbY/yYxpUN6T5rd4DeE58ZOGX/3N9OXAiJVqmxc6yliusF5U/ygm0wonfrYwcUvKoZ9XrgsJuVVcJs2lorm/UN7SS1Lwv3mDA6Vpuxu3/fG9rEaLYR2gGG7X25ii/SjMEkAHB3X2rxRRxuEkL0UQAD+8LFGj3WKA/AcMVcJTnxgB/3RHTjfNbcoH4XosWRZLb7gXK+JPkRcdHAVaZ87qsw9bAt04Q9ud2ezybfxS1JuChmuOY+Q2+7DTdYVmyrOHifXSQUdwbVu2bXJX1IMHyP2e5l03kMh/GkKs9wRXfOq1IfBlHCku8dGwhiOhEu4JAhT0WE3zfye4NTN/JX3JUChw+Xno/3+RC/FyUN6j8ek9IXGrwYyK/mWike3xv46j/RH4+wbTO2s0jgAAAAAElFTkSuQmCC"
+                                alt="">
+                            <p data-v-87a372a3="">Deposit amount</p>
+                        </div>
+                        <div data-v-87a372a3="" class="Recharge__content-paymoney__money-list">
+                            <div data-v-67caa467="" class="list m-t-10 c-row c-row-between c-flex-warp">
+                                <div data-v-67caa467="" data-money="100" class="li action">
+                                    <span data-v-67caa467="" class="number"><span data-v-87a372a3="">₹</span>100</span>
+                                </div>
+                                <div data-v-67caa467="" data-money="500" class="li">
+                                    <span data-v-67caa467="" class="number"><span data-v-87a372a3="">₹</span> 500</span>
+                                </div>
+                                <div data-v-67caa467="" data-money="1000" class="li">
+                                    <span data-v-67caa467="" class="number"><span data-v-87a372a3="">₹</span> 1K</span>
+                                </div>
+                                <div data-v-67caa467="" data-money="5000" class="li">
+                                    <span data-v-67caa467="" class="number"><span data-v-87a372a3="">₹</span> 5K</span>
+                                </div>
+                                <div data-v-67caa467="" data-money="10000" class="li">
+                                    <span data-v-67caa467="" class="number"><span data-v-87a372a3="">₹</span> 10K</span>
+                                </div>
+                                <div data-v-67caa467="" data-money="20000" class="li">
+                                    <span data-v-67caa467="" class="number"><span data-v-87a372a3="">₹</span> 2OK</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-v-87a372a3="" class="Recharge__content-paymoney__money-input">
+                            <div data-v-87a372a3="" class="place-div">₹</div>
+                            <div data-v-87a372a3="" class="van-cell van-field amount-input"
+                                modelmodifiers="[object Object]">
+                                <div class="van-cell__value van-field__value">
+                                    <div class="van-field__body"><input type="tel" value="100" id="ramount"
+                                            inputmode="numeric" oninput="value=value.replace(/\D/g,'')"
+                                            id="van-field-2-input" class="van-field__control"
+                                            placeholder="Please enter the amount"></div>
+
+                                </div>
+                            </div>
+                            <div data-v-87a372a3="" class="place-right"><img data-v-87a372a3=""
+                                    src="/assets/png/cutoff.png" alt=""></div>
+                        </div>
+                        <div data-v-87a372a3="" class="Recharge__container-rechageBtn" id="create-bank" >Deposit</div>
+                    </div>
+                    <div data-v-c2e24b33="" data-v-9171efc9="" class="Recharge__container-intro">
+                        <div data-v-c2e24b33="" class="Recharge__container-intro__title"><img data-v-c2e24b33=""
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFeSURBVHgB7ZlBTsMwEEW/UxZd9gjhBnCD3gRYVayAE7S9ATtUQGq5SY/QG5AjsESI+jNJEUKojhPUMI6YJ0VKYkfym7EdyQMYxv/GNenEJUZ4z67geS6PObqjcBMet/ngKNaBj4MzvPlbuRuhe3K0JKtr5L1EfetXcvsXg98/hoV7Lq9QezADvJNokDPok9c1hjMwyKZQjHxTwgLkCXpA3RrovUAvMAFtTEAbE9DGBLQxAW1MQBsT0MYEtDEBbUzgwBRoSfRo8QtyDWKOITbuAi9IhGYCnnN3iRkSJD6FHFepDr4kLrDFExImOoUk+uuf7z5Pi3Mclta1gZJoBqriRsLUZaBAGeXX6ox0/b3hN5HqinAGPHdzf+CmSJiwwBBSVpL9nhjzIUtWIihQ/aw8b6oHz5mUm5ZStRkjMaJVSi5wLd3UqzWy7vaONboLuYlMJc/T3ZrgBjoUMAxjLx/FEVjdO9QcmwAAAABJRU5ErkJggg=="
+                                alt="">
+                            <p data-v-c2e24b33="">Recharge instructions</p>
+                        </div>
+                        <div data-v-c2e24b33="" class="Recharge__container-intro__lists">
+                            <div data-v-c2e24b33="" class="item">
+                                <p data-v-c2e24b33="">If the transfer time is up, please fill out the deposit form
+                                    again.</p>
+                                <p data-v-c2e24b33="">The transfer amount must match the order you created, otherwise
+                                    the money cannot be credited successfully.</p>
+                                <p data-v-c2e24b33="">If you transfer the wrong amount, our company will not be
+                                    responsible for the lost amount!</p>
+                                <p data-v-c2e24b33="">Note: do not cancel the deposit order after the money has been
+                                    transferred.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-v-7692a079="" data-v-67caa467="" class="Loading c-row c-row-middle-center">
+            <div data-v-7692a079="" class="van-loading van-loading--circular"><span data-v-7692a079=""
+                    class="van-loading__spinner van-loading__spinner--circular" style="color: rgb(242, 65, 59);"><svg
+                        data-v-7692a079="" viewBox="25 25 50 50" class="van-loading__circular">
+                        <circle data-v-7692a079="" cx="50" cy="50" r="20" fill="none"></circle>
+                    </svg></span></div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        function alertMess(text, sic) {
+            $('body').append(
+                `
+        <div data-v-1dcba851="" class="msg">
+            <div data-v-1dcba851="" class="msg-content v-enter-active v-enter-to" style=""> ${text} </div>
+                 </div>
+                 `
+            );
+            setTimeout(() => {
+                $('.msg .msg-content').removeClass('v-enter-active v-enter-to');
+                $('.msg .msg-content').addClass('v-leave-active v-leave-to');
+                setTimeout(() => {
+                    $('.msg').remove();
+                }, 100);
+                sic.removeClass('block-click');
+            }, 1000);
+        }
+        $('#reload .van-image').click(function (e) {
+            e.preventDefault();
+            $(this).addClass('action block-click');
+            setTimeout(() => {
+                $(this).removeClass('action block-click');
+            }, 2500);
+            $.ajax({
+                type: "GET",
+                url: "/api/webapi/GetUserInfo",
+                dataType: "json",
+                success: function (response) {
+                    $('.Loading').fadeOut(50);
+                    let user = response.data;
+                    $('.wallet-user .name').text(user.name_user);
+                    $('.money').text(user.money_user + ".00 ₹");
+                }
+            });
+        });
+        $.ajax({
+            type: "GET",
+            url: "/api/webapi/GetUserInfo",
+            dataType: "json",
+            success: function (response) {
+                $('.Loading').fadeOut(50);
+                let user = response.data;
+                $('.wallet-user .name').text(user.name_user);
+                $('.money').text(user.money_user + ".00 ₹");
+            }
+        });
+
+        $('.pay-box .list .li').click(function (e) {
+            e.preventDefault();
+            let money = $(this).attr('data-money');
+            $('.pay-box .list .li').removeClass('action');
+            $(this).addClass('action');
+            $('input').val(money);
+        });
+        function formateT(params) {
+            let result = (params < 10) ? "0" + params : params;
+            return result;
+        }
+
+        function timerJoin(params = '') {
+            let date = '';
+            if (params) {
+                date = new Date(Number(params));
+            } else {
+                date = new Date();
+            }
+            let years = formateT(date.getFullYear());
+            let months = formateT(date.getMonth() + 1);
+            let days = formateT(date.getDate());
+
+            let hours = formateT(date.getHours());
+            let minutes = formateT(date.getMinutes());
+            let seconds = formateT(date.getSeconds());
+            return days + '/' + months + '/' + years;
+        }
+
+
+        $('.pay-box:eq(0) .item').click(function (e) {
+            e.preventDefault();
+            $('.pay-box:eq(0) .item').removeClass('action');
+            $(this).addClass('action');
+            $('.pay-box:eq(0) .item').find('.icon').remove();
+            $(this).append(`<div data-v-67caa467="" class="icon">
+                                 <i data-v-67caa467="" class="van-icon van-icon-success" style="color: rgb(255, 255, 255); font-size: 14px;"> </i>
+                             </div>`);
+        });
+        function setCookie(cname, cvalue, exdays) {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays * 180 * 60 * 60 * 1000));
+            let expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+        $('#create-bank').click(function (e) {
+            e.preventDefault();
+            $(this).addClass('block-click');
+
+            // Get the necessary data
+            let money = $('#ramount').val().trim();
+            let selectedType = $('.pay-box:eq(0) .list').find('.action').attr('type');
+
+            // Check conditions before redirecting
+            console.log(money)
+            if (money && money >= 100 && money <= 20000) {
+                // Make an AJAX request to get the order ID
+                console.log(money ,selectedType)
+                
+                $.ajax({
+                    type: "POST",
+                    url: "/api/webapi/recharge",
+                    data: {
+                        money: money,
+                        type: selectedType,
+                    },
+                    dataType: "json",
+                    success: function (response) {
+                        let pay = response.pay;
+                        let order_id = response.orderid;
+                       console.log(order_id,pay)
+
+                        if (order_id) {
+                            alertMess(response.message, $(this));
+                            $('.Loading').fadeIn(0);
+                            setCookie('orderid', order_id, 1);
+                            console.log(selectedType);
+                            setTimeout(() => {
+                                $('.Loading').fadeOut(0);
+                                if (pay) {
+                                    // Handle redirection based on the selected type
+                                    if (selectedType === "bank") {
+                                        window.location.href = "/wallet/recharge/pay";
+                                    } else if (selectedType === "MOMO") {
+                                        window.location.href = "/wallet/recharge/pay1";
+                                    } else if (selectedType === "bank2") {
+                                        window.location.href = "/wallet/recharge/pay2";
+                                    } else if (selectedType === "usdt") {
+                                        window.location.href = "/wallet/recharge/pay3";
+                                    } else if (selectedType === "trx") {
+                                        window.location.href = "/wallet/recharge/pay4";
+                                    }
+                                }
+                            }, 1500);
+                        } else {
+                            // Handle the case when the order ID is not valid
+                            console.error("Invalid order ID");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle AJAX request errors
+                        console.error("AJAX request failed:", status, error);
+                    }
+                });
+            } else {
+                alertMess('Deposit amount range: 250~20000', $(this));
+            }
+        });
+
+        $('.info .box').click(function (e) {
+            let text = $(this).find('.text').text().trim();
+            navigator.clipboard.writeText(text);
+            $(this).addClass('block-click');
+            alertMess('Copy successful', $(this));
+        });
+        $('.place-right').on('click', function () {
+            $('.pay-box .list .li').removeClass('action');
+            $('.pay-box:eq(0) .item').removeClass('action');
+            $('#ramount').val(''); // Reset the value of the input field
+        });
+
+
+
+
+    </script>
+
+    <script>
+        // Get the reloadmoney image element
+        var reloadMoneyImage = document.getElementById("reloadmoney");
+
+        // Add click event listener
+        reloadMoneyImage.addEventListener("click", function () {
+            // Reload the page
+            location.reload();
+        });
+        // Get the draggable element
+    var draggableElement = document.getElementById('customerId');
+    
+    // Variables to store mouse position
+    var offsetX = 0;
+    var offsetY = 0;
+
+    // Function to handle touch start event
+    function handleTouchStart(e) {
+        offsetX = e.touches[0].clientX - draggableElement.getBoundingClientRect().left;
+        offsetY = e.touches[0].clientY - draggableElement.getBoundingClientRect().top;
+    }
+
+    // Function to handle touch move event
+    function handleTouchMove(e) {
+        e.preventDefault();
+        var x = e.touches[0].clientX - offsetX;
+        var y = e.touches[0].clientY - offsetY;
+        
+        // Update the position of the draggable element
+        draggableElement.style.left = x + 'px';
+        draggableElement.style.top = y + 'px';
+    }
+
+    // Add event listeners for touch events
+    draggableElement.addEventListener('touchstart', handleTouchStart, false);
+    draggableElement.addEventListener('touchmove', handleTouchMove, false);
+    </script>
+
+</body>
+
+</html>
